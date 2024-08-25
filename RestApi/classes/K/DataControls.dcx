@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.9.14" id="DataControls"
+                    Package="K">
+  <AdapterDataControl id="tessst" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.rest.RestURLDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="false" Definition="K.tessst" BeanClass="K.tessst"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <Definitions>
+        <Definition xmlns="http://xmlns.oracle.com/adfm/adapter/rest/json" ConnectionName="teszt" Source="/downloadJson"
+                    HttpMethod="GET" id="getUsers" MethodRef="JSON"
+                    SchemaLocation="tessst_getUsers_response_schema.json" ensureKeyAttribute="true"
+                    dcStructureVersion="2" RootElement="methodReturn"/>
+      </Definitions>
+    </Source>
+  </AdapterDataControl>
+  <AdapterDataControl id="ApiConnect" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.rest.RestURLDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="false" Definition="K.ApiConnect"
+                      BeanClass="K.ApiConnect" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <Definitions>
+        <Definition xmlns="http://xmlns.oracle.com/adfm/adapter/rest/json" ConnectionName="Api" Source="/downloadJson"
+                    HttpMethod="GET" id="get" MethodRef="JSON" SchemaLocation="ApiConnect_get_response_schema.json"
+                    ensureKeyAttribute="true" dcStructureVersion="2" RootElement="methodReturn"/>
+      </Definitions>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

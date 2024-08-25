@@ -1,0 +1,20 @@
+{
+  "$schema" : "http://www.oracle.com/schema",
+  "id" : "http://www.oracle.com/schema",
+  "type" : "object",
+  "properties" : {
+    "countryCode" : {
+      "type" : "string"
+    },
+    "name" : {
+      "type" : "string"
+      
+    },
+    "id" : {
+      "type" : "number"
+    },
+    "email" : {
+      "type" : "string"
+    }
+  }
+}
